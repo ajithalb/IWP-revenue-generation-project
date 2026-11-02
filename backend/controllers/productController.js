@@ -169,9 +169,9 @@ function getProductById(req, res) {
 
 function getCategories(req, res) {
   try {
-    const chuditharSub = db.prepare('SELECT DISTINCT subcategory, COUNT(*) as count FROM products WHERE category = "chudithar" GROUP BY subcategory').all();
-    const makeupSub = db.prepare('SELECT DISTINCT subcategory, COUNT(*) as count FROM products WHERE category = "makeup" GROUP BY subcategory').all();
-    const counts = db.prepare('SELECT category, COUNT(*) as count FROM products GROUP BY category').all();
+    const chuditharSub = db.prepare("SELECT DISTINCT subcategory, COUNT(*) as count FROM products WHERE category = 'chudithar' GROUP BY subcategory").all();
+    const makeupSub = db.prepare("SELECT DISTINCT subcategory, COUNT(*) as count FROM products WHERE category = 'makeup' GROUP BY subcategory").all();
+    const counts = db.prepare("SELECT category, COUNT(*) as count FROM products GROUP BY category").all();
 
     return res.json({
       success: true,
