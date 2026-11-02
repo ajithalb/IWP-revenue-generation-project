@@ -1,0 +1,24 @@
+{
+  "name": "sasti-boutique",
+  "version": "1.0.0",
+  "description": "Sasti Boutique - Complete E-Commerce Website & Bridal Makeup Booking System",
+  "scripts": {
+    "build": "npm run setup:backend && npm run setup:frontend && cd frontend && npm run build",
+    "start": "cd backend && node server.js",
+    "setup": "npm run setup:backend && npm run setup:frontend && npm run seed",
+    "setup:backend": "cd backend && npm install",
+    "setup:frontend": "cd frontend && npm install",
+    "seed": "cd backend && npm run seed",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"magenta,cyan\" \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "author": "Sasti Boutique",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer-core": "^25.16.0"
+  }
+}

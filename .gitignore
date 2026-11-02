@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Production builds
+frontend/dist/
+dist/
+
+# Environment files
+.env
+backend/.env
+*.env.local
+
+# SQLite database files
+backend/database/*.db-journal
+backend/database/*.db-wal
+backend/database/*.db-shm
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local reports & temp files
+*.docx
+*.pdf
+*.zip
+report_assets/
+*.log
+*.py
+*.mjs
+kpriet_logo_extracted.png
+convert_*.ps1
+export_*.ps1
+get_*.ps1

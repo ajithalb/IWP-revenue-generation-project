@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: sasti-boutique
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SHOP_EMAIL
+        value: nisanth08.connect@gamil.com
+      - key: SHOP_PHONE
+        value: "7904871123"
+      - key: ADMIN_DEFAULT_USERNAME
+        value: admin
+      - key: ADMIN_DEFAULT_PASSWORD
+        value: Admin@Sasti2026
